@@ -3,7 +3,7 @@ import error from "../src/components/error/error";
 import login from "../src/components/login/login";
 import modalAvatar from "../src/components/modal-avatar/modalAvatar";
 import profile from "../src/components/profile/profile";
-import signin from "../src/components/signin/signIn";
+import signin from "../src/components/signin/signin";
 
 const root = document.querySelector("#root");
 
