@@ -5,3 +5,5 @@
 3. Для разработки npm run start
 
 figma: https://www.figma.com/file/KimJqUkjNKhHL6pvDOUAW5/Chatogram
+
+netlify: https://jolly-darwin-de17e5.netlify.app/
