@@ -1,0 +1,8 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _default = ".profile\n    .profile__back \n        button.profile__back-btn(type=\"button\")\n    .profile__wrap\n        .profile__main\n            .profile__header \n                .profile__avatar-block \n                    img.profile__avatar\n                p.profile__name #{user}\n            if data==='full' \n                .profile__data-block\n                    each val, index in inputCommon\n                        .profile__data-row \n                            span.profile__data-name #{val.label}\n                            input.profile__data(type=val.type=\"\" name=val.name=\"\" value=val.value) \n            else\n                .profile__data-block\n                    each val, index in inputPassword\n                        .profile__data-row \n                            span.profile__data-name #{val.label}\n                            input.profile__data(type=val.type=\"\" name=val.name=\"\" value=val.value) \n\n            if state==='basic'\n                .profile__actions-block\n                    .profile__data-row \n                        button.profile__action(type=buttonTypeChangeData) #{buttonTextChangeData}\n                    .profile__data-row \n                        button.profile__action(type=buttonTypeChangePassword) #{buttonTextChangePassword}\n                    .profile__data-row \n                        a.profile__exit(hreg=linkHref) #{linkText}\n            else\n                .profile__actions-block \n                    button.profile__action-btn(type=buttonTypeSave) #{buttonTextSave}";
+exports["default"] = _default;
