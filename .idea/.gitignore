@@ -10,4 +10,3 @@ npm-debug.*
 Thumbs.db
 dist/
 .cache/
-.parcel-cache/
