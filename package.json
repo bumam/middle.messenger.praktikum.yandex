@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "npm run clear && parcel ./static/*.html  --port 3000",
-    "build": "npm run clear && parcel build ./static/*.html --no-source-maps --no-cache --public-url ./",
+    "build": "parcel build ./static/*.html",
     "clear": "DEL /s /q dist .parcel-cache",
     "start": "parcel ./static/*.html --no-source-maps --no-cache --port 3000",
     "serve": "node server.js",
