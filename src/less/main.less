@@ -1,0 +1,48 @@
+@import "variables.less";
+@import "normalize.less";
+@import "mobile-form.less";
+@import "profile.less";
+@import "fail.less";
+@import "modal.less";
+@import "chats.less";
+@import "dialog.less";
+@import "current-chat.less";
+@import "menu.less";
+
+* {
+  color: @black-color;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    margin: 15px;
+    font-size: 15px;
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
