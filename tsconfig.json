@@ -5,12 +5,6 @@
   "noUnusedParameters": false,
   "sourceMap": false,
   "strictNullChecks": false,
-  "compilerOptions": {
-    "outDir": "dist",
-    "target": "es2017",
-    "declaration": false,
-    "module": "commonjs",
-  },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
