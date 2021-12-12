@@ -1,3 +1,5 @@
+https://github.com/bumam/middle.messenger.praktikum.yandex/pull/2
+
 Встречайте Чатограм! Мессенджер, в котором все удобно
 
 1. Устнаовите зависимости с помощью команды npm install
