@@ -4,7 +4,7 @@
   "noUnusedLocals": false,
   "noUnusedParameters": false,
   "sourceMap": false,
-  "strictNullChecks": true,
+  "strictNullChecks": false,
   "compilerOptions": {
     "outDir": "dist",
     "target": "es2017",
