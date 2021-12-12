@@ -17,7 +17,7 @@
     "dev": "npm run clear && parcel ./static/*.html  --port 3000",
     "build": "npm run clear && parcel build ./static/*.html --no-source-maps --no-cache --public-url ./",
     "clear": "DEL /s /q dist .parcel-cache",
-    "start": "npm run clear && parcel build ./static/*.html --no-source-maps --no-cache --public-url ./ && node ./server.js",
+    "start": "parcel ./static/*.html --no-source-maps --no-cache --port 3000",
     "serve": "node server.js",
     "eslint": "eslint . --ext .ts,.js",
     "eslint:fix": "eslint . --ext .ts,.js --fix",
