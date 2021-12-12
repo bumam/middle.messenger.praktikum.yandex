@@ -1,4 +1,4 @@
-PR: https://github.com/bumam/middle.messenger.praktikum.yandex/pull/2
+https://github.com/bumam/middle.messenger.praktikum.yandex/pull/2
 
 Встречайте Чатограм! Мессенджер, в котором все удобно
 
