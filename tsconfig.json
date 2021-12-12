@@ -1,9 +1,11 @@
 {
   "compileOnSave": true,
-  "noImplicitAny": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "sourceMap": true,
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true
+  },
   "strictNullChecks": true,
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
