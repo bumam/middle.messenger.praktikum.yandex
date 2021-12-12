@@ -5,9 +5,9 @@
 node_modules/
 build/
 .vscode
-node_modules/
 npm-debug.*
 Thumbs.db
 dist/
 .cache/
 .parcel-cache/
+.idea
