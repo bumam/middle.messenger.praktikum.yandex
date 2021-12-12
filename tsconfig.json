@@ -1,7 +1,14 @@
 {
-  "noImplicitAny": false,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "sourceMap": true,
-  "strictNullChecks": false
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es2017",
+    "declaration": false,
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "noImplicitAny" : true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+  }
 }
