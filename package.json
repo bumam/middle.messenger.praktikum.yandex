@@ -14,10 +14,15 @@
     "node": ">=12.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel static/index.html --port 3000 --open",
+    "dev": "npm run clear && parcel ./static/*.html  --port 3000",
+    "build": "parcel build ./static/*.html",
+    "clear": "DEL /s /q dist .parcel-cache",
+    "start": "parcel ./static/*.html --no-source-maps --no-cache --port 3000",
     "serve": "node server.js",
-    "build": "parcel build static/index.html"
+    "eslint": "eslint . --ext .ts,.js",
+    "eslint:fix": "eslint . --ext .ts,.js --fix",
+    "stylelint": "stylelint **/*.less",
+    "stylelint::fix": "stylelint **/*.less --fix"
   },
   "repository": {
     "type": "git",
@@ -30,12 +35,25 @@
   },
   "homepage": "https://github.com/bumam/middle.messenger.praktikum.yandex#readme",
   "dependencies": {
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint-plugin-import": "^2.25.3",
     "express": "^4.17.1",
     "less": "^4.1.2",
     "parcel": "^2.0.1",
-    "pug": "^3.0.2"
+    "parcel-plugin-custom-dist-structure": "^1.1.18",
+    "pug": "^3.0.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@parcel/transformer-less": "^2.0.1"
+    "@parcel/transformer-less": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb": "^19.0.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "postcss-less": "^5.0.0",
+    "stylelint": "^14.1.0",
+    "stylelint-config-standard": "^24.0.0",
+    "typescript": "^4.5.3"
   }
 }
