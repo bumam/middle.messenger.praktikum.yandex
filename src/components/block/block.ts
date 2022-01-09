@@ -97,6 +97,7 @@ export default abstract class Block<T extends BlockProps> {
     Object.assign(this.props, nextProps)
   }
 
+  // @ts-ignore
   get element() {
     return this._element
   }

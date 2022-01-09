@@ -6,7 +6,7 @@ export default `.chats
                     .chats__user 
                         img
                         p #{user}
-                button.chats__control.chats__control--right Профиль
+                a.chats__control.chats__control--right(href='/profile') Профиль
             .chats__search-wrap 
                 input.chats__search(type='text')
         .chats__dialogs-wrap.dialog 
@@ -16,4 +16,4 @@ export default `.chats
             | !{activeChatContent}
         else 
             .current-chat__empty-chat
-                p Выберите чат чтобы отправить сообщение`
+                p Выберите чат чтобы отправить сообщение`;

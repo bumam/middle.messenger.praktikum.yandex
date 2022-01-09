@@ -1,13 +1,13 @@
-import Form from "../form/form.index"
-import template from "./login.tmpl"
-import Input from "../input/input.index"
-import Block from "../block/block"
-import { LoginType } from "./login.type"
-import FormValidator from "../../validation/form-validators.constants"
-import { Button } from "../button/button.index"
+import Form from "../form/form.index";
+import template from "./login.tmpl";
+import Input from "../input/input.index";
+import Block from "../block/block";
+import { LoginType } from "./login.type";
+import FormValidator from "../../validation/form-validators.constants";
+import { Button } from "../button/button.index";
 
 export class Login extends Block<LoginType> {
-  validator = new FormValidator()
+  validator = new FormValidator();
 
   constructor() {
     super({
@@ -16,7 +16,7 @@ export class Login extends Block<LoginType> {
         title: "Вход",
         buttonText: "Войти",
         buttonType: "submit",
-        linkHref: "/signup.html",
+        linkHref: "/signup",
         linkText: "Нет аккаунта?",
         content: [
           new Input({
@@ -53,10 +53,10 @@ export class Login extends Block<LoginType> {
           },
         }),
       }),
-    })
+    });
   }
 
   render(): HTMLElement {
-    return this.compile(template, this.props)
+    return this.compile(template, this.props);
   }
 }

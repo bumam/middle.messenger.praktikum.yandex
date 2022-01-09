@@ -1,6 +1,6 @@
 export default `.profile
     .profile__back 
-        a.profile__back-btn(href="/chats")
+        a.profile__back-btn(href="/profile")
     .profile__wrap
         form.profile__main
             .profile__header
@@ -12,4 +12,4 @@ export default `.profile
 
                 .profile__actions-block.profile__actions-block--center
                     | !{button}
-                    `
+                    `;
