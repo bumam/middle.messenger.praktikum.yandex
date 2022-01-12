@@ -1,5 +1,5 @@
 import { VALIDATION_DATA as data } from "./form-validators.index";
-
+import UserController from "../controllers/user/user";
 type submitData = { [key: string]: string | null };
 
 export default class FormValidator {
@@ -8,7 +8,7 @@ export default class FormValidator {
   onInputFocus(target: EventTarget | null): void {
     const input = target as HTMLInputElement;
     const field = input.closest(".input-field-js") as HTMLDivElement;
-    const error = field.querySelector(".input-error404-js") as HTMLSpanElement;
+    const error = field.querySelector(".input-error-js") as HTMLSpanElement;
 
     if (field.classList.contains("invalid")) {
       field.classList.remove("invalid");
@@ -25,9 +25,7 @@ export default class FormValidator {
   inputValidityCheck(input: HTMLInputElement): void {
     if (input.classList.contains("input-js")) {
       const field = input.closest(".input-field-js") as HTMLDivElement;
-      const error = field.querySelector(
-        ".input-error404-js"
-      ) as HTMLSpanElement;
+      const error = field.querySelector(".input-error-js") as HTMLSpanElement;
 
       if (data[input.name]) {
         const regExp = data[input.name].regExp;
@@ -57,7 +55,7 @@ export default class FormValidator {
     }
   }
 
-  onSubmit(evt: MouseEvent, target: EventTarget | null): void {
+  onSubmit(evt: MouseEvent, target: EventTarget | null, success?: any): void {
     evt.preventDefault();
 
     const button = target as HTMLButtonElement;
@@ -71,7 +69,13 @@ export default class FormValidator {
     if (Object.values(this.submitData).includes(null)) {
       throw new Error("Заполните форму");
     } else {
-      console.log(this.submitData);
+      new UserController().logout();
+
+      setTimeout(() => {
+        return success
+          ? success.call(success, this.submitData)
+          : console.log(this.submitData);
+      }, 1000);
     }
   }
 }

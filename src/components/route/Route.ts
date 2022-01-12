@@ -1,37 +1,38 @@
-import isEqual from "../../utils/isEqual"
+import isEqual from "../../utils/isEqual";
+import Block from "../block/block";
 
 export default class Route {
-  private _pathname: string
-  private _blockClass: any
-  private _block: any
+  private pathname: string;
+  private blockClass: any;
+  private block: Block<any> | null;
   // @ts-ignore
-  private props: any
+  private props: any;
 
   constructor(pathname: string, view: any, props: any) {
-    this._pathname = pathname
-    this._blockClass = view
-    this._block = null
-    this.props = props
+    this.pathname = pathname;
+    this.blockClass = view;
+    this.block = null;
+    this.props = props;
   }
 
   navigate(pathname: string) {
     if (this.match(pathname)) {
-      this._pathname = pathname
-      this.render()
+      this.pathname = pathname;
+      this.render();
     }
   }
 
   leave() {
-    if (this._block) {
-      this._block.remove()
+    if (this.block) {
+      this.block.remove();
     }
   }
 
   match(pathname: string) {
-    return isEqual(pathname, this._pathname)
+    return isEqual(pathname, this.pathname);
   }
 
   render() {
-    this._block = new this._blockClass()
+    this.block = new this.blockClass();
   }
 }

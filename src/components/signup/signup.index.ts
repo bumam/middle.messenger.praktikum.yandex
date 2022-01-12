@@ -5,6 +5,7 @@ import Block from "../block/block";
 import { Button } from "../button/button.index";
 import FormValidator from "../../validation/form-validators.constants";
 import { SignUpType } from "./signup.type";
+import UserController from "../../controllers/user/user";
 
 export default class Signup extends Block<SignUpType> {
   validator = new FormValidator();
@@ -16,7 +17,7 @@ export default class Signup extends Block<SignUpType> {
         title: "Регистрация",
         buttonText: "Зарегистрироваться",
         buttonType: "submit",
-        linkHref: "/signin",
+        linkHref: "/",
         linkText: "Войти",
         content: [
           new Input({
@@ -107,7 +108,12 @@ export default class Signup extends Block<SignUpType> {
         button: new Button({
           title: "Зарегистрироваться",
           events: {
-            click: (evt: any) => this.validator.onSubmit(evt, evt.target),
+            click: (evt: any) =>
+              this.validator.onSubmit(
+                evt,
+                evt.target,
+                new UserController().signUp
+              ),
           },
         }),
       }),
