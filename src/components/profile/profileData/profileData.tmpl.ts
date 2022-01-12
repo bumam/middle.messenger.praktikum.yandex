@@ -1,6 +1,6 @@
 export default `.profile
     .profile__back 
-        a.profile__back-btn(href="/chats")
+        a.profile__back-btn(href="/messenger")
     .profile__wrap
         .profile__main
             .profile__header
@@ -12,8 +12,8 @@ export default `.profile
 
                 .profile__actions-block
                     .profile__data-row 
-                        a.profile__action(href="./profile-change-data.html") Изменить данные
+                        a.profile__action(href="./setting") Изменить данные
                     .profile__data-row 
-                        a.profile__action(href="./profile-change-password.html") Изменить пароль
+                        a.profile__action(href="./setting-password") Изменить пароль
                     .profile__data-row 
-                        a.profile__exit(href="/chats.html") Выйти`
+                        a.profile__exit(href="/chats.html") Выйти`;

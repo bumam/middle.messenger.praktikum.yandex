@@ -1,13 +1,14 @@
-import template from "../login/login.tmpl"
-import Form from "../form/form.index"
-import Input from "../input/input.index"
-import Block from "../block/block"
-import { Button } from "../button/button.index"
-import FormValidator from "../../validation/form-validators.constants"
-import { SignUpType } from "./signup.type"
+import template from "../login/login.tmpl";
+import Form from "../form/form.index";
+import Input from "../input/input.index";
+import Block from "../block/block";
+import { Button } from "../button/button.index";
+import FormValidator from "../../validation/form-validators.constants";
+import { SignUpType } from "./signup.type";
+import UserController from "../../controllers/user/user";
 
 export default class Signup extends Block<SignUpType> {
-  validator = new FormValidator()
+  validator = new FormValidator();
 
   constructor(
     props: SignUpType = {
@@ -16,7 +17,7 @@ export default class Signup extends Block<SignUpType> {
         title: "Регистрация",
         buttonText: "Зарегистрироваться",
         buttonType: "submit",
-        linkHref: "/login.html",
+        linkHref: "/",
         linkText: "Войти",
         content: [
           new Input({
@@ -107,16 +108,21 @@ export default class Signup extends Block<SignUpType> {
         button: new Button({
           title: "Зарегистрироваться",
           events: {
-            click: (evt: any) => this.validator.onSubmit(evt, evt.target),
+            click: (evt: any) =>
+              this.validator.onSubmit(
+                evt,
+                evt.target,
+                new UserController().signUp
+              ),
           },
         }),
       }),
     }
   ) {
-    super(props)
+    super(props);
   }
 
   render(): HTMLElement {
-    return this.compile(template, this.props)
+    return this.compile(template, this.props);
   }
 }
